@@ -14,5 +14,11 @@ RSpec.feature "home_page", type: :feature do
       expect(page).to have_content("Abdul: 100 HP")
     end
 
+    scenario "when a player attacks they reduce the enemy's hitpoints" do
+      sign_in_and_play
+      click_button 'attack'
+      click_button 'return'
+      expect(page).to have_content("Abdul: 90 HP")
+    end
   end
 end
