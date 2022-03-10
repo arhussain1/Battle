@@ -28,6 +28,7 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
+    
     # Assign player session variables below
     @player1 = session[:player1_name]
     @player2 = session[:player2_name]
@@ -37,6 +38,12 @@ class Battle < Sinatra::Base
     @player2_hp = session[:player2_hp]
 
     erb(:play)
+  end
+
+  get '/attack' do
+    @player1 = session[:player1_name]
+    @player2 = session[:player2_name]
+    erb :attack
   end
 
 
