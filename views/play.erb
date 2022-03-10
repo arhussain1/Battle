@@ -1,9 +1,9 @@
 
-<%= "Player1 => #{@player1} and Player2 => #{@player2}" %>
+<%= "Player1 => #{@game.player1.name} and Player2 => #{@game.player2.name}" %>
 
-<%= "#{@player1}: #{@player1_hp} HP" %>
+<%= "#{@game.player1.name}: #{@game.player1.hp} HP" %>
 
-<%= "#{@player2}: #{@player2_hp} HP" %>
+<%= "#{@game.player2.name}: #{@game.player2.hp} HP" %>
 
 
 <form action="/attack">

@@ -1,4 +1,9 @@
+<% if $game.target == @player2 %>%
+
 <%= @player1 %> attacked <%= @player2%>
+<%else%>
+<%= @player2 %> attacked <%= @player1%>
+<%end%>
 
 <form action="/play">
   <input type= "submit" value = "return">
